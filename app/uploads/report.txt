@@ -1,0 +1,2 @@
+Example report from the Breaking Python lab.
+This file is the only one meant to be downloaded from /download.

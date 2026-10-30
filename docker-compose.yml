@@ -1,0 +1,12 @@
+services:
+  lab:
+    build: .
+    ports:
+      # Only reachable from your own machine. Do not change it to 0.0.0.0.
+      - "127.0.0.1:5000:5000"
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_RAW   # required by ping
+    security_opt:
+      - no-new-privileges:true

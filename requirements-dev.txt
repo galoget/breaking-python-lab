@@ -1,0 +1,12 @@
+# Development / analysis tools - NOT runtime dependencies.
+#
+# Kept out of requirements.txt on purpose, so the app's runtime install and the
+# Docker image stay minimal (a good packaging habit: runtime deps != tooling).
+# Install these only when you want to run static analysis:
+#   pip install -r requirements-dev.txt
+#
+# Today this is just the SAST tools; pinned to the versions used in
+# docs/sast-notes.md so the results are reproducible. Add other dev tools
+# (linters, test runners) here as the project grows.
+bandit==1.9.4
+semgrep==1.183.0

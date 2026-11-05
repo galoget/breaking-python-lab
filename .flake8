@@ -1,0 +1,4 @@
+[flake8]
+# PEP 8 line length. The lab code is kept within this limit on purpose.
+max-line-length = 79
+extend-exclude = venv,.venv,__pycache__,.git

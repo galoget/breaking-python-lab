@@ -1,0 +1,19 @@
+# Python dependencies for the Breaking Python Lab.
+#
+# Single file, identical on both branches (main and fixed): it lists the union
+# of what each branch imports, so one `pip install -r requirements.txt` covers
+# `git checkout main` and `git checkout fixed` in the same virtual environment
+# (no reinstall needed when you switch branches).
+#
+# Used by both branches:
+Flask==3.1.3
+requests==2.34.2
+PyYAML==6.0.3
+#
+# Used by the main branch (vulnerable):
+lxml==6.1.3          # permissive XML parser -> XXE
+MarkupSafe==3.0.4    # Markup() marks the XSS payload as safe
+#
+# Used by the fixed branch (patched):
+defusedxml==0.7.1    # hardened XML parser -> XXE fix
+itsdangerous==2.2.0  # signed session cookies
